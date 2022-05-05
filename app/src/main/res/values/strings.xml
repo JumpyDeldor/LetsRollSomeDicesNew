@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LetsRollSomeDicesNew</string>
+    <string name="clearHistoryAction"> Clear History </string>
+    <string name="clearDicesAction"> Clear Dices </string>
+</resources>

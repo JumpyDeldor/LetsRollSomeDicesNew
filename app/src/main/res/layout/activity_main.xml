@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/dicesScroll"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/size4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D4"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/diceAttributes4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size">
+
+                <LinearLayout
+                    android:id="@+id/diceNumber4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/diceText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Dices"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeDice4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeDice"
+                        android:transitionName="4"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/diceAmount4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="4"
+                        app:layout_constraintRight_toLeftOf="@+id/addDice" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeDice"-->
+
+
+                    <Button
+                        android:id="@+id/addDice4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addDice"
+                        android:transitionName="4"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modifierNumber4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diceNumber">
+
+                    <TextView
+                        android:id="@+id/modifierText4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Modifier"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeModifier4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeMod"
+                        android:transitionName="4"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/modifierAmount4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="4"
+                        app:layout_constraintRight_toLeftOf="@+id/addModifier"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeModifier"-->
+
+
+                    <Button
+                        android:id="@+id/addModifier4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addMod"
+                        android:transitionName="4"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/size6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D6"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/diceAttributes6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size">
+
+                <LinearLayout
+                    android:id="@+id/diceNumber6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/diceText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Dices"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeDice6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeDice"
+                        android:transitionName="6"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/diceAmount6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="6"
+                        app:layout_constraintRight_toLeftOf="@+id/addDice" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeDice"-->
+
+
+                    <Button
+                        android:id="@+id/addDice6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addDice"
+                        android:transitionName="6"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modifierNumber6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diceNumber">
+
+                    <TextView
+                        android:id="@+id/modifierText6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Modifier"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeModifier6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeMod"
+                        android:transitionName="6"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/modifierAmount6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="6"
+                        app:layout_constraintRight_toLeftOf="@+id/addModifier"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeModifier"-->
+
+
+                    <Button
+                        android:id="@+id/addModifier6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addMod"
+                        android:transitionName="6"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/size8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D8"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/diceAttributes8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size">
+
+                <LinearLayout
+                    android:id="@+id/diceNumber8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/diceText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Dices"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeDice8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeDice"
+                        android:transitionName="8"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/diceAmount8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:transitionName="8"
+                        android:text="0"
+                        app:layout_constraintRight_toLeftOf="@+id/addDice" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeDice"-->
+
+
+                    <Button
+                        android:id="@+id/addDice8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addDice"
+                        android:transitionName="8"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modifierNumber8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diceNumber">
+
+                    <TextView
+                        android:id="@+id/modifierText8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Modifier"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeModifier8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeMod"
+                        android:transitionName="8"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/modifierAmount8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="8"
+                        app:layout_constraintRight_toLeftOf="@+id/addModifier"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeModifier"-->
+
+
+                    <Button
+                        android:id="@+id/addModifier8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addMod"
+                        android:transitionName="8"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/size10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D10"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/diceAttributes10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size">
+
+                <LinearLayout
+                    android:id="@+id/diceNumber10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/diceText10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Dices"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeDice10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeDice"
+                        android:transitionName="10"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/diceAmount10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="10"
+                        app:layout_constraintRight_toLeftOf="@+id/addDice" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeDice"-->
+
+
+                    <Button
+                        android:id="@+id/addDice10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addDice"
+                        android:transitionName="10"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modifierNumber10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diceNumber">
+
+                    <TextView
+                        android:id="@+id/modifierText10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Modifier"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeModifier10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeMod"
+                        android:transitionName="10"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/modifierAmount10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="10"
+                        app:layout_constraintRight_toLeftOf="@+id/addModifier"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeModifier"-->
+
+
+                    <Button
+                        android:id="@+id/addModifier10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addMod"
+                        android:transitionName="10"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/size12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D12"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/diceAttributes12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size">
+
+                <LinearLayout
+                    android:id="@+id/diceNumber12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/diceText12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Dices"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeDice12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeDice"
+                        android:transitionName="12"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/diceAmount12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="12"
+                        app:layout_constraintRight_toLeftOf="@+id/addDice" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeDice"-->
+
+
+                    <Button
+                        android:id="@+id/addDice12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addDice"
+                        android:transitionName="12"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modifierNumber12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diceNumber">
+
+                    <TextView
+                        android:id="@+id/modifierText12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Modifier"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeModifier12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeMod"
+                        android:transitionName="12"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/modifierAmount12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="12"
+                        app:layout_constraintRight_toLeftOf="@+id/addModifier"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeModifier"-->
+
+
+                    <Button
+                        android:id="@+id/addModifier12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addMod"
+                        android:transitionName="12"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/size20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D20"
+                android:textSize="30sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/diceAttributes20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/size">
+
+                <LinearLayout
+                    android:id="@+id/diceNumber20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/diceText20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Dices"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeDice20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeDice"
+                        android:transitionName="20"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/diceAmount20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="20"
+                        app:layout_constraintRight_toLeftOf="@+id/addDice" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeDice"-->
+
+
+                    <Button
+                        android:id="@+id/addDice20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addDice"
+                        android:transitionName="20"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modifierNumber20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diceNumber">
+
+                    <TextView
+                        android:id="@+id/modifierText20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="Modifier"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/removeModifier20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="removeMod"
+                        android:transitionName="20"
+                        android:text="Remove" />
+
+                    <EditText
+                        android:id="@+id/modifierAmount20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:transitionName="20"
+                        app:layout_constraintRight_toLeftOf="@+id/addModifier"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--                app:layout_constraintLeft_todRightOf="@+id/removeModifier"-->
+
+
+                    <Button
+                        android:id="@+id/addModifier20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:onClick="addMod"
+                        android:transitionName="20"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/rollButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="makeRoll"
+        android:text="ROLL"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dicesScroll" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scrollbars="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollButton">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
